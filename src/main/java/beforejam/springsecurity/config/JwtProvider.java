@@ -21,7 +21,6 @@ public class JwtProvider {
     private final long EXPIRED = 1000L * 60 * 60;
 
     public JwtProvider(
-            @Value("${SECRETKEY}")
             String secretKey) {
         this.key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
     }
